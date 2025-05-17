@@ -22,6 +22,19 @@ This repository contains a Python project that compares how a **manual (human)**
    - Efficiency comparison
    - Accuracy of manual player based on AI performance
 ---
+## Efficiency & Accuracy Formula
+
+### Efficiency:
+> **Efficiency (%) = (AI Moves / Manual Moves) × 100**
+
+Shows how optimized the AI is compared to the human player.
+
+### Accuracy of Manual Player:
+> **Accuracy (%) = Efficiency (%)**
+
+We consider how closely the manual player performed relative to the AI as their "accuracy".
+
+---
 ## 📦 Getting Started
 
 To set up the environment and run this project, follow the steps below:
