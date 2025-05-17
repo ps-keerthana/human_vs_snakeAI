@@ -1,4 +1,4 @@
-# 🐍 Human vs Snake AI – Performance Comparison 🤖
+# Human vs Snake AI – Performance Comparison 🎮🤖
 
 This repository contains a Python project that compares how a **manual (human)** player and an **AI** perform in the classic Snake Game using `pygame`. The AI is tested using the **same food positions** as the human, and their performance is compared in terms of total moves and efficiency.
 
