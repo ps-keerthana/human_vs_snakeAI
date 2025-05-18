@@ -81,6 +81,7 @@ def show_game_over_stats(manual_foods, manual_moves, ai_foods, ai_moves):
         screen.blit(text, rect)
     
     pygame.display.update()
+    pygame.event.clear()
 
     # Wait for user key to quit
     waiting = True
@@ -88,7 +89,9 @@ def show_game_over_stats(manual_foods, manual_moves, ai_foods, ai_moves):
         for event in pygame.event.get():
             if event.type == pygame.QUIT or event.type == pygame.KEYDOWN:
                 waiting = False
-        clock.tick(30)  # Slow down the loop to avoid high CPU usage
+        clock.tick(60)  # Slow down the loop to avoid high CPU usage
+    pygame.quit()
+    sys.exit()
 def run_manual_game():
     snake = Snake(100, 100, BLOCK_SIZE)
     food = Food(BLOCK_SIZE, WIDTH, HEIGHT, snake.body)
@@ -126,8 +129,6 @@ def run_manual_game():
             food = Food(BLOCK_SIZE, WIDTH, HEIGHT, snake.body)
 
         draw_stats(len(food_log), move_count, mode, FPS)
-
-
         if snake.check_collision():
             pygame.time.wait(1000)
             return food_log, len(food_log), move_count
@@ -174,8 +175,7 @@ def run_ai_game(food_log):
     return food_index, move_count
 
 def main():
-    
-    
+
     food_log, manual_foods, manual_moves = run_manual_game()
     pygame.time.wait(1000)  # short pause between games
     ai_foods, ai_moves = run_ai_game(food_log)
@@ -188,9 +188,6 @@ def main():
     print(f"Manual Player Accuracy: {accuracy:.2f}% compared to AI's optimal path")
 
     show_game_over_stats(manual_foods, manual_moves, ai_foods, ai_moves)
-
-    pygame.quit()
-    sys.exit()
 
 if __name__ == "__main__":
     main()
