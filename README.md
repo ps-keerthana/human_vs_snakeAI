@@ -16,7 +16,7 @@ This allows us to compare their **efficiency, accuracy**, and gameplay style!
 
 ---
 
-## 🔍 Project Highlights
+## Project Highlights
 
 - 🎮 **Manual Gameplay**: Control the snake using arrow keys
 - 🤖 **AI Gameplay**: AI uses pathfinding to collect the same food sequence
@@ -26,7 +26,7 @@ This allows us to compare their **efficiency, accuracy**, and gameplay style!
 
 ---
 
-## 🧠 Core Concepts Implemented
+## Core Concepts Implemented
 
 - Game development using `pygame`
 - Real-time stats panel
@@ -55,13 +55,13 @@ Manual player's accuracy is defined by how close their path length is to the AI�
 Follow these steps to set up and run the project locally:
 
 ```bash
-# 📌 1. Check your Python version (should be 3.7+)
+# 1. Check your Python version (should be 3.7+)
 python --version
 
-# 📌 2. Create a virtual environment (optional but recommended)
+# 2. Create a virtual environment (optional but recommended)
 python -m venv myenv
 
-# 📌 3. Activate the environment
+# 3. Activate the environment
 
 # On Windows:
 myenv\Scripts\activate
@@ -69,8 +69,8 @@ myenv\Scripts\activate
 # On macOS/Linux:
 source myenv/bin/activate
 
-# 📌 4. Install dependencies
+# 4. Install dependencies
 pip install pygame
 
-# 📌 5. Run the game
+# 5. Run the game
 python snake_game.py
