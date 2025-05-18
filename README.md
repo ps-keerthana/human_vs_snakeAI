@@ -1,63 +1,76 @@
 # Human vs Snake AI – Performance Comparison 🎮🤖
 
-This repository contains a Python project that compares how a **manual (human)** player and an **AI** perform in the classic Snake Game using `pygame`. The AI is tested using the **same food positions** as the human, and their performance is compared in terms of total moves and efficiency.
+This repository presents a fun and insightful **Python project** built using `pygame`, where a **manual player (human)** competes against an **AI-controlled snake** in the classic Snake Game.
 
----
-## Project Overview
-
-- Manual gameplay: You control the snake with arrow keys.
-- AI gameplay: The AI mimics the food sequence collected by the manual player and uses pathfinding to reach food.
-- Final output: Shows both players’ food count, number of moves, efficiency, and accuracy comparison.
+The twist?  
+➡️ The AI plays the exact same game using the **same food positions** as the manual player.  
+This allows us to compare their **efficiency, accuracy**, and gameplay style!
 
 ---
 
-## Core Concepts Implemented
+## 🎬 Demo GIF
 
-1. **Game Development using `pygame`**
-2. **AI Pathfinding**
-3. **Data Logging & Analysis**
-4. **Performance Metrics**:
-   - Number of moves taken
-   - Food collected
-   - Efficiency comparison
-   - Accuracy of manual player based on AI performance
+> 🕹️ Manual Player → 🤖 AI Snake → 📊 Final Stats
+
+![Snake Game Demo](assets/demo.gif)
+
 ---
-## Efficiency & Accuracy Formula
 
-### Efficiency:
+## 🔍 Project Highlights
+
+- 🎮 **Manual Gameplay**: Control the snake using arrow keys
+- 🤖 **AI Gameplay**: AI uses pathfinding to collect the same food sequence
+- 📊 **Live Stats Panel**: See mode, moves, food eaten, and FPS live
+- 🧠 **Smart AI Logic**: BFS-style pathfinding to avoid collisions and walls
+- 🏁 **Final Comparison**: Shows accuracy, move efficiency, and food collection side-by-side
+
+---
+
+## 🧠 Core Concepts Implemented
+
+- Game development using `pygame`
+- Real-time stats panel
+- AI decision-making logic
+- Performance metrics logging
+- Manual vs AI comparison framework
+
+---
+
+## Performance Metrics Explained
+
+### 🧠 Efficiency:
 > **Efficiency (%) = (AI Moves / Manual Moves) × 100**
 
-Shows how optimized the AI is compared to the human player.
+Shows how optimized the AI path is compared to the human.
 
-### Accuracy of Manual Player:
+### 🎯 Accuracy:
 > **Accuracy (%) = Efficiency (%)**
 
-We consider how closely the manual player performed relative to the AI as their "accuracy".
+Manual player's accuracy is defined by how close their path length is to the AI’s.
 
 ---
-## 📦 Getting Started
 
-To set up the environment and run this project, follow the steps below:
+## 🛠️ Setup Instructions
+
+Follow these steps to set up and run the project locally:
 
 ```bash
-# Check Python and pip versions
+# 📌 1. Check your Python version (should be 3.7+)
 python --version
-pip --version
 
-# Create a virtual environment
+# 📌 2. Create a virtual environment (optional but recommended)
 python -m venv myenv
 
-# Activate the virtual environment
+# 📌 3. Activate the environment
 
-# For Windows:
+# On Windows:
 myenv\Scripts\activate
-# For macOS/Linux:
+
+# On macOS/Linux:
 source myenv/bin/activate
 
-# Install pygame
+# 📌 4. Install dependencies
 pip install pygame
 
-# Run the main game file
+# 📌 5. Run the game
 python snake_game.py
-
-
